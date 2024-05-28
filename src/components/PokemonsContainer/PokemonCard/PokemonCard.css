@@ -1,0 +1,142 @@
+.pokemon-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 3vw 5.5vw;
+    width: 100%;
+    height: 32vw;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.pokemon-card.water {
+    background-color: #58abf6;
+    box-shadow: 0 15px 40px 0 #58abf6;
+}
+
+.pokemon-card.grass {
+    background-color: #8bbe8a;
+    box-shadow: 0 15px 40px 0 #8bbe8a;
+}
+
+.pokemon-card.electric {
+    background-color: #f2cb55;
+    box-shadow: 0 15px 40px 0 #f2cb55;
+}
+
+.pokemon-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 25%;
+    width: 30%;
+    height: 30%;
+    background: radial-gradient(rgba(255, 255, 255, .1) 2px, #000 2px, transparent 0);
+    background-size: 14px 14px;
+}
+
+.pokemon-card .pokemon-info {
+    width: 65%;
+    text-align: left;
+    display: flex;
+    gap: 2px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* .pokemon-card .pokemon-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 210px;
+    background-color: rgba(255,255,255,.11);
+    background-image: url('/public/images/pokeball-transparent.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+.pokemon-info .id-number {
+    font-size: .9rem;
+    font-weight: 800;
+    color: #0006;
+}
+
+.pokemon-info .pokemon-name {
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-weight: 800;
+    font-size: min(35px,6.5vw);
+    color: #fff;
+    margin-bottom: 3px;
+}
+
+.pokemon-info .types {
+    display: flex;
+    gap: 5px;
+}
+
+.pokemon-info .types div {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+
+.types div>img {
+    margin-right: 5px;
+    width: 10px;
+    height: 10px;
+}
+
+.pokemon-info .types .type-name {
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.pokemon-info .types div.water {
+    background: #4a90da;
+}
+
+.pokemon-info .types div.poison {
+    background: #a552cc;
+}
+
+.pokemon-info .types div.grass {
+    background: #62b957;
+}
+
+.pokemon-info .types div.ice {
+    background: #61cec0;
+}
+
+.pokemon-info .types div.electric {
+    background: #eed535;
+}
+
+.pokemon-card .pokemon-image {
+    max-width: 30vw;
+    position: relative;
+    bottom: 20%;
+    height: 112%;
+    margin-left: auto;
+}
+
+/* Responsivo */
+@media screen and (min-width: 880px) {
+    .pokemon-card {
+        width: 27%;
+        height: 150px;
+        padding: 1.5vw;
+    }
+
+    .pokemon-info .pokemon-name {
+        font-size: 2.2vw;
+    }
+
+    .pokemon-card .pokemon-image {
+        max-width: 10vw;
+    }
+}
