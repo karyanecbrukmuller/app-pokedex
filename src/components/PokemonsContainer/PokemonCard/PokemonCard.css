@@ -57,63 +57,19 @@
     background-size: cover;
 } */
 
-.pokemon-info .id-number {
+.pokemon-card .pokemon-info .id-number {
     font-size: .9rem;
     font-weight: 800;
     color: #0006;
 }
 
-.pokemon-info .pokemon-name {
+.pokemon-card .pokemon-info .pokemon-name {
     text-transform: capitalize;
     letter-spacing: 1px;
     font-weight: 800;
     font-size: min(35px,6.5vw);
     color: #fff;
     margin-bottom: 3px;
-}
-
-.pokemon-info .types {
-    display: flex;
-    gap: 5px;
-}
-
-.pokemon-info .types div {
-    display: inline-block;
-    border-radius: 5px;
-    padding: 2px 5px;
-}
-
-.types div>img {
-    margin-right: 5px;
-    width: 10px;
-    height: 10px;
-}
-
-.pokemon-info .types .type-name {
-    text-transform: capitalize;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 700;
-}
-
-.pokemon-info .types div.water {
-    background: #4a90da;
-}
-
-.pokemon-info .types div.poison {
-    background: #a552cc;
-}
-
-.pokemon-info .types div.grass {
-    background: #62b957;
-}
-
-.pokemon-info .types div.ice {
-    background: #61cec0;
-}
-
-.pokemon-info .types div.electric {
-    background: #eed535;
 }
 
 .pokemon-card .pokemon-image {
@@ -132,7 +88,7 @@
         padding: 1.5vw;
     }
 
-    .pokemon-info .pokemon-name {
+    .pokemon-card .pokemon-info .pokemon-name {
         font-size: 2.2vw;
     }
 

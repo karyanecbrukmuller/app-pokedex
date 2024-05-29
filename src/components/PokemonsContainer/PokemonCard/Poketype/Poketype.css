@@ -1,0 +1,43 @@
+.pokemon-card .pokemon-info .types {
+    display: flex;
+    gap: 5px;
+}
+
+.pokemon-card .pokemon-info .types div {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 2px 5px;
+}
+
+.pokemon-card .pokemon-info .types div>img {
+    margin-right: 5px;
+    width: 10px;
+    height: 10px;
+}
+
+.pokemon-card .pokemon-info .types .type-name {
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.pokemon-card .pokemon-info .types div.water {
+    background: #4a90da;
+}
+
+.pokemon-card .pokemon-info .types div.poison {
+    background: #a552cc;
+}
+
+.pokemon-card .pokemon-info .types div.grass {
+    background: #62b957;
+}
+
+.pokemon-card .pokemon-info .types div.ice {
+    background: #61cec0;
+}
+
+.pokemon-card .pokemon-info .types div.electric {
+    background: #eed535;
+}
