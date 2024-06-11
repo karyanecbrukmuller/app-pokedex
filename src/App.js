@@ -1,17 +1,17 @@
 import './App.css';
-import Header from './components/Header/Header';
-import PokemonTypeList from './components/PokemonTypeList/PokemonTypeList';
-import PokemonsContainer from './components/PokemonsContainer/PokemonsContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import PokemonPage from './pages/PokemonPage';
 
 function App() {
   return (
-    <div className='Wrapper'>
-      <div className="App">
-        <Header />
-        <PokemonTypeList />
-        <PokemonsContainer />
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+          <Route path='/' element={<HomePage />}></Route>
+          <Route path='/pokemon/details/:id' element={<PokemonPage />}></Route>
+          <Route path='*' element={<HomePage />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

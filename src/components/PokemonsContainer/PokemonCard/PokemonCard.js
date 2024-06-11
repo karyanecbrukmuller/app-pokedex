@@ -4,8 +4,13 @@ import Poketype from './Poketype/Poketype';
 
 
 const PokemonCard = ({idpokemon, namepokemon, poketype, imgpokemon}) => {
+    
+    const handlecard = (id) => {
+        window.location.href='/pokemon/details/' + id;
+    }
+    
     return (
-        <div className={`pokemon-card ${poketype}`}>
+        <div className={`pokemon-card ${poketype}`} onClick={() => handlecard(idpokemon)}>
             <div className='pokemon-info'>
                 <span className='id-number'>#{idpokemon}</span>
                 <span className='pokemon-name'>{namepokemon}</span>
