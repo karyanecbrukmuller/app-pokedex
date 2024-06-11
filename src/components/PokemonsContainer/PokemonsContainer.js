@@ -2,13 +2,19 @@ import React from 'react';
 import './PokemonsContainer.css';
 import PokemonCard from './PokemonCard/PokemonCard';
 
+// Lista de Pokémon
+const listPokemon = [
+    {'id_pokemon' : '001', 'name_pokemon' : 'Dewgong', 'poke_type' : 'water', 'image_pokemon' : '/images/PokemonImage/dewgong.svg'},
+    {'id_pokemon' : '002', 'name_pokemon' : 'Bulbasaur', 'poke_type' : 'grass', 'image_pokemon' : '/images/PokemonImage/bulbasaur.svg'},
+    {'id_pokemon' : '003', 'name_pokemon' : 'Pikachu', 'poke_type' : 'electric', 'image_pokemon' : '/images/PokemonImage/pikachu.svg'}
+];
 
 const PokemonsContainer = () => {
     return (
         <div className='pokemons-container'>
-            <PokemonCard idpokemon="001" namepokemon="Dewgong" poketype="water" imgpokemon="/images/PokemonImage/dewgong.svg" />
-            <PokemonCard idpokemon="002" namepokemon="Bulbasaur" poketype="grass" imgpokemon="/images/PokemonImage/bulbasaur.svg" />
-            <PokemonCard idpokemon="003" namepokemon="Pikachu" poketype="electric" imgpokemon="/images/PokemonImage/pikachu.svg" />
+            {listPokemon.map((pokemon, index) => (
+                <PokemonCard key={index} {...pokemon} />
+            ))}
         </div>
     );
 };
